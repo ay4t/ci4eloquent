@@ -1,0 +1,25 @@
+{
+    "name": "ay4t/ci4eloquent",
+    "description": "menyambungkan eloquent ORM untuk codeigniter 4",
+    "type": "library",
+    "require-dev": {
+        "codeigniter4/framework": "^4.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ay4t\\Ci4eloquent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayatulloh Ahad R",
+            "email": "kawoel@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/database": "^10.4",
+        "illuminate/events": "^10.4"
+    }
+}

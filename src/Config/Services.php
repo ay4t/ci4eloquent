@@ -19,14 +19,12 @@
  * ----------	---	---------------------------------------------------------
  */
 
-namespace Ay4t\CodeigniterEloquent\Config;
 
-use CodeIgniter\Config\Services as CoreServices;
+namespace Ay4t\CI4Eloquent\Config;
 
-require_once SYSTEMPATH . 'Config/Services.php';
-
-class Services extends CoreServices
+class Services extends \CodeIgniter\Config\Services
 {
+    
     /**
      * Eloquent Service
      *
@@ -43,7 +41,7 @@ class Services extends CoreServices
         $db = \Config\Database::connect();
         $capsule = new \Illuminate\Database\Capsule\Manager;
         $capsule->addConnection([
-            'driver' => $db->DBDriver,
+            'driver' => 'mysql',
             'host' => $db->hostname,
             'database' => $db->database,
             'username' => $db->username,
@@ -55,7 +53,6 @@ class Services extends CoreServices
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
 
-        return $capsule;
-        
+        return $capsule;        
     }
 }
